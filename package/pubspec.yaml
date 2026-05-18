@@ -1,0 +1,24 @@
+name: vector_animate_flutter
+description: Flutter runtime player for vector_animate (.va.json / .va) animations.
+version: 0.1.1
+homepage:
+
+environment:
+  sdk: ^3.11.4
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  xml: ^6.5.0
+  vector_math: ^2.2.0
+  archive: ^4.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+# flutter:
+#   assets:
+#     - assets/

@@ -3,7 +3,7 @@ steps:
     operations:
       - type: copy
         src: ../animations/vector_animate_flutter
-        dest: packages/flutter
+        dest: package
         hash_check: true
         ignore:
           - "*.map"
