@@ -1,0 +1,32 @@
+steps:
+  copy:
+    operations:
+      - type: copy
+        src: ../animations/vector_animate_flutter
+        dest: packages/flutter
+        hash_check: true
+        ignore:
+          - "*.map"
+          - "*.md"
+          - ".claude"
+          - "example"
+          - "test"
+          - ".dart_tool"
+          - "build"
+          - "LICENSE"
+          - "pubspec.lock"
+
+  publish:
+    version_from: ../animations/vector_animate_flutter/pubspec.yaml
+    only_if_changes: true
+    operations:
+      - type: commit
+        message: "chore: publish flutter {{version}}"
+      - type: create_tag
+        tag: "vector_animate_flutter-v{{version}}"
+        message: "Flutter runtime v{{version}}"
+      - type: push
+        remote: origin
+        branch: main
+      - type: push_tags
+        remote: origin
